@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lap of Nature</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+  
+
+<div class="slideshow-container">
+
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 8 </div>
+    <img src="mateusz-buda-d2Sd-JK2tJo-unsplash.jpg" style="width:100%">
+    <div class="text" style="color: antiquewhite; font-size: xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;"> Natural Sunlight</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 8</div>
+    <img src="mehadi-hasan-62bMHnirC-0-unsplash.jpg" style="width:100%">
+    <div class="text" style="color: antiquewhite; font-size: xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;"> Cloud Beauty</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 8</div>
+    <img src="karsten-wurth-UbGYPMbMYP8-unsplash.jpg" style="width:100%">
+    <div class="text" style="color: antiquewhite; font-size: xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;"> Natural Scenery</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 8 </div>
+    <img src="simon-wilkes-2ceyL8qAPXg-unsplash.jpg" style="width:100%">
+    <div class="text" style="color: antiquewhite; font-size: xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;"> Rays of life</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 8</div>
+    <img src="tobias-tullius-RhjVGxILcqE-unsplash.jpg" style="width:100%">
+    <div class="text" style="color: antiquewhite; font-size: xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;"> Mist Beauty</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 8</div>
+    <img src="globelet-reusable-dBoLDs1lg5Q-unsplash.jpg" style="width:100%">
+    <div class="text" style="color: antiquewhite; font-size: xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;"> Water noise</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 8 </div>
+    <img src="pexels-riyakumari08-20876396.jpg" style="width:100%">
+    <div class="text" style="color: antiquewhite; font-size: xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;"> Wild life</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 8</div>
+    <img src="pexels-kienvirak-17125433.jpg" style="width:100%">
+    <div class="text" style="color: antiquewhite; font-size: xx-large; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;"> Mountain Scenery</div>
+  </div>
+
+
+  <!-- buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!--dots -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+
+<script type="text/javascript">
+
+ var slideIndex = 1;
+ showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+
+
+</body>
+</html>
